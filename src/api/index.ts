@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Member, Event, Media, HomeContent } from '../types';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://localhost:7228/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://churchplatformapi20250429212228.azurewebsites.net/api',
 });
 
 export const getMembers = async (): Promise<Member[]> => {
