@@ -22,9 +22,13 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <Church className="h-8 w-8 text-purple-600" />
+            <img
+                src="/images/logo.jpg"
+                alt="Temple of Praise Logo"
+                className="h-8 w-8 object-contain"
+              />
               <span className="ml-2 text-xl font-bold text-gray-800">
-                Temple of Praise
+                Temple of Praise Ministries
               </span>
             </Link>
           </div>
