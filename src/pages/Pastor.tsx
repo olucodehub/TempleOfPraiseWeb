@@ -11,9 +11,14 @@ const Pastor = () => {
             <div className="md:flex-shrink-0">
               <img
                 className="h-96 w-full object-cover md:w-96"
-                src="https://images.unsplash.com/photo-1594895418980-cd173fedf7ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                src="/images/pastor2.jpeg"
                 alt="Pastor"
               />
+              {/* <img
+              className="h-96 w-full md:w-96 object-contain bg-white"
+              src="/images/pastor2.jpeg"
+              alt="Pastor"
+            /> */}
             </div>
             <div className="p-8">
               <div className="uppercase tracking-wide text-purple-600 font-semibold">Lead Pastor</div>
@@ -21,7 +26,7 @@ const Pastor = () => {
               <div className="mt-4 space-y-4">
                 <div className="flex items-center text-gray-600">
                   <Calendar className="h-5 w-5 mr-2" />
-                  <span>Serving since 2015</span>
+                  <span>Serving since 20XX</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Mail className="h-5 w-5 mr-2" />
@@ -47,7 +52,7 @@ const Pastor = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Biography</h2>
           <div className="prose max-w-none text-gray-600">
             <p className="text-lg mb-4">
-              Pastor John Doe has been serving as the lead pastor of Temple of Praise Ministries since 2015. With over 20 years of ministry experience, he brings a wealth of knowledge and spiritual insight to our congregation.
+              Pastor Nelson Boateng Frimpong has been serving as the lead pastor of Temple of Praise Ministries since 20XX. With over 20 years of ministry experience, he brings a wealth of knowledge and spiritual insight to our congregation.
             </p>
             <p className="text-lg mb-4">
               Born and raised in Nigeria, Pastor John received his theological education from prestigious institutions and has served in various ministerial capacities across Africa and Europe before being called to lead our church in Eindhoven.
