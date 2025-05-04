@@ -11,29 +11,29 @@ const carouselImages = [
     description: "Join us in praising the Lord with joy and thanksgiving"
   },
   {
-    url: "/images/TObanner.jpg",
-    title: "TOP",
-    description: "Praising God and Empowering People"
-  },
-  // {
-  //   url: "https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-  //   title: "Diverse Community",
-  //   description: "A multicultural family united in Christ"
-  // },
-  {
-    url: "/images/michael2.jpeg",
-    title: "Diverse Community",
-    description: "A multicultural family united in Christ"
-  },
-  {
     url: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
     title: "Spirit-Filled Worship",
     description: "Experience the power of pentecostal praise"
   },
   {
+    url: "/images/TObanner.jpg",
+    title: "TOP",
+    description: "Praising God and Empowering People"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    title: "Diverse Community",
+    description: "A multicultural family united in Christ"
+  },
+  {
     url: "https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
     title: "Prayer & Intercession",
     description: "Standing together in faith and prayer"
+  },
+  {
+    url: "/images/michael2.jpg", // or a suitable worship photo
+    title: "Youth Ministry",
+    description: "Empowering the next generation"
   },
   // {
   //   url: "https://images.unsplash.com/photo-1560184611-ff3e53f00e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
