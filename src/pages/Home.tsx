@@ -31,7 +31,7 @@ const carouselImages = [
     description: "Standing together in faith and prayer"
   },
   {
-    url: "/images/michael2.jpg", // or a suitable worship photo
+    url: "/images/michael2.jpeg", // or a suitable worship photo
     title: "Youth Ministry",
     description: "Empowering the next generation"
   },
