@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { format } from 'date-fns';
 import { Calendar, Video, Users, ChevronLeft, ChevronRight } from 'lucide-react';
-import { getHomeContent, getEvents, getMedia } from '../api';
+import { getHomeContent, getMedia } from '../api';
+//import { getEvents } from '../api';                     <-----  Uncokmment this line when ready to load events from backend             
+import { dummyEvents } from '../data/dummyEvents';
 
 const carouselImages = [
   {
@@ -49,13 +51,17 @@ const carouselImages = [
 
 const Home = () => {
   const { data: homeContent } = useQuery('homeContent', getHomeContent);
-  const { data: events } = useQuery('events', getEvents);
+  //const { data: events } = useQuery('events', getEvents);        <-----  Uncokmment this line when ready to load events from backend 
   const { data: media } = useQuery('media', getMedia);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const featuredMedia = media?.[0];
-  const upcomingEvents = events?.slice(0, 3);
+  //const upcomingEvents = events?.slice(0, 3);    <------  Uncomment this line when i have events coming from backend, for now we are using dummy data as below
+
+  const upcomingEvents = dummyEvents
+  .filter(event => new Date(event.date) >= new Date())
+  .slice(0, 3);  // remove this upcomingEvents and replace with line 58. this is just a test with dummy data
 
   useEffect(() => {
     if (!isAutoPlaying) return;
