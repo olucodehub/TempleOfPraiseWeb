@@ -6,7 +6,7 @@ import { getHomeContent, getEvents, getMedia } from '../api';
 
 const carouselImages = [
   {
-    url: "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    url: "/images/pastor.jpg",
     title: "Worship Experience",
     description: "Join us in praising the Lord with joy and thanksgiving"
   },
