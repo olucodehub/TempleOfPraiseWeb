@@ -59,7 +59,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-purple-400" />
                 <a href="mailto:info@templeofpraise.nl" className="text-gray-400 hover:text-white">
-                info@templeofpraiseministries.com
+                info@templeofpraiseministries.nl
                 </a>
               </li>
             </ul>
