@@ -15,11 +15,11 @@ const carouselImages = [
     title: "Spirit-Filled Worship",
     description: "Experience the power of pentecostal praise"
   },
-  {
-    url: "/images/TObanner.jpg",
-    title: "TOP",
-    description: "Praising God and Empowering People"
-  },
+  // {
+  //   url: "/images/TObanner.jpg",
+  //   title: "TOP",
+  //   description: "Praising God and Empowering People"
+  // },
   {
     url: "https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
     title: "Diverse Community",
