@@ -151,7 +151,7 @@ const NewMember = () => {
                   onChange={handleChange}
                   rows={3}
                   className="pl-10 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-purple-500 focus:border-purple-500"
-                  placeholder="Your address in Eindhoven"
+                  placeholder="Your address"
                 />
               </div>
             </div>
