@@ -55,7 +55,7 @@ const Pastor = () => {
               Pastor Nelson Boateng Frimpong has been serving as the lead pastor of Temple of Praise Ministries since 20XX. With over 20 years of ministry experience, he brings a wealth of knowledge and spiritual insight to our congregation.
             </p>
             <p className="text-lg mb-4">
-              Born and raised in Nigeria, Pastor John received his theological education from prestigious institutions and has served in various ministerial capacities across Africa and Europe before being called to lead our church in Eindhoven.
+              Born and raised in Ghana, Pastor John Nelson his theological education from prestigious institutions and has served in various ministerial capacities across Africa and Europe before being called to lead our church in Eindhoven.
             </p>
             <p className="text-lg">
               His passion for multicultural ministry and commitment to building a diverse, inclusive community has been instrumental in shaping Temple of Praise Ministries into the vibrant church it is today. Pastor John's teaching style combines deep biblical insight with practical life application, making the Word of God accessible and relevant to everyone.
