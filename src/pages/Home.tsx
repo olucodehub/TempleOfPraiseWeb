@@ -8,7 +8,12 @@ import { dummyEvents } from '../data/dummyEvents';
 
 const carouselImages = [
   {
-    url: "/images/pastor.jpg",
+    url: "https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    title: "Prayer & Intercession",
+    description: "Standing together in faith and prayer"
+  },
+  {
+    url: "/images/choir1.png",
     title: "Worship Experience",
     description: "Join us in praising the Lord with joy and thanksgiving"
   },
@@ -17,33 +22,18 @@ const carouselImages = [
     title: "Spirit-Filled Worship",
     description: "Experience the power of pentecostal praise"
   },
-  // {
-  //   url: "/images/TObanner.jpg",
-  //   title: "TOP",
-  //   description: "Praising God and Empowering People"
-  // },
   {
     url: "https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
     title: "Diverse Community",
     description: "A multicultural family united in Christ"
   },
   {
-    url: "https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-    title: "Prayer & Intercession",
-    description: "Standing together in faith and prayer"
-  },
-  {
-    url: "/images/michael2.jpeg", // or a suitable worship photo
+    url: "/images/home/youth.jpg", // or a suitable worship photo
     title: "Youth Ministry",
     description: "Empowering the next generation"
   },
-  // {
-  //   url: "https://images.unsplash.com/photo-1560184611-ff3e53f00e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-  //   title: "Youth Ministry",
-  //   description: "Empowering the next generation"
-  // }
   {
-    url: "/images/choir1.png",
+    url: "/images/home/choirpurple.jpg",
     title: "TOP Voices",
     description: "Our choir lifting hearts through harmonious worship"
   }
@@ -202,11 +192,12 @@ const Home = () => {
           <div className="md:flex">
             <div className="md:flex-1">
               <img
-                src="https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                src="/images/pastor.jpg"
                 alt="Latest Sermon"
                 className="w-full h-64 md:h-full object-cover"
               />
             </div>
+
             <div className="md:flex-1 p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Sermon</h2>
               <div className="flex items-center mb-4">
@@ -216,7 +207,10 @@ const Home = () => {
               <p className="text-gray-600 mb-6">
                 Discover how faith can move mountains and transform lives in this powerful message from our latest Sunday service.
               </p>
-              <button className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              <button
+                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                onClick={() => window.open('https://rhemacloud.com', '_blank')}
+              >
                 Listen Now
               </button>
             </div>

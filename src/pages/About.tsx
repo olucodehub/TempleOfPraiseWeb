@@ -8,7 +8,7 @@ const About = () => {
       <div
         className="relative h-[400px] bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")',
+          backgroundImage: "url('/images/about/header.png')",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60" />

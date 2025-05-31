@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="ml-2 text-xl font-bold">Temple of Praise</span>
             </div>
             <p className="text-gray-400">
-              A place of worship, fellowship, and spiritual growth in Eindhoven.
+              A place of worship, fellowship, and spiritual growth in Eindhoven, Netherlands.
             </p>
           </div>
 
@@ -68,26 +68,28 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Service Times</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Sunday Service: 10:00 AM</li>
+              <li>Sunday Service: 11:00 AM</li>
               <li>Bible Study: Wednesday 7:00 PM</li>
               <li>Prayer Meeting: Friday 7:00 PM</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {new Date().getFullYear()} Temple of Praise Ministries. All rights reserved.</p>   
-<p>
-  Designed by{' '}
-  <a
-    href="https://api.whatsapp.com/send/?phone=31636041326&text&type=phone_number&app_absent=0"
-    target="_blank"
-    style={{ textDecoration: 'underline', color: 'blue' }}
-  >
-    Tuyi Solutions
-  </a>
-</p>
+          <p className="text-xs mt-1">
+            Designed by{' '}
+            <a
+              href="https://api.whatsapp.com/send/?phone=31636041326&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-blue-400"
+            >
+              Tuyi Solutions
+            </a>
+          </p>
         </div>
+
       </div>
     </footer>
   );
