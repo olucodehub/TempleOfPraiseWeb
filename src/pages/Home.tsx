@@ -280,7 +280,7 @@ const Home = () => {
       </section>
 
       {/* Upcoming Events */}
-      <section className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <section className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12'>
         <h2 className='text-3xl font-bold text-gray-900 mb-8'>
           Upcoming Events
         </h2>
@@ -294,15 +294,25 @@ const Home = () => {
                 <img
                   src={event.imageUrl}
                   alt={event.title}
-                  className='w-full h-48 object-cover'
+                  className='w-full h-64 object-cover'
                 />
               )}
               <div className='p-6'>
                 <h3 className='text-xl font-semibold mb-2'>{event.title}</h3>
                 <p className='text-gray-600 mb-4'>{event.description}</p>
-                <div className='flex items-center text-gray-500'>
-                  <Calendar className='h-5 w-5 mr-2' />
-                  <span>{format(new Date(event.date), 'MMMM d, yyyy')}</span>
+                <div className='space-y-2'>
+                  <div className='flex items-center text-gray-500'>
+                    <Calendar className='h-5 w-5 mr-2' />
+                    <span>{format(new Date(event.date), 'MMMM d, yyyy')}</span>
+                  </div>
+                  <div className='flex items-center text-gray-500'>
+                    <Clock className='h-5 w-5 mr-2' />
+                    <span>{event.time}</span>
+                  </div>
+                  <div className='flex items-center text-gray-500'>
+                    <MapPin className='h-5 w-5 mr-2' />
+                    <span>{event.location}</span>
+                  </div>
                 </div>
               </div>
             </div>
