@@ -169,11 +169,11 @@ const Home = () => {
             {homeContent?.welcomeMessage}
           </p>
           <blockquote className='border-l-4 border-purple-500 pl-4 italic'>
-            Welcome to Temple of praise (TOP) ministries — A Thriving Community
+            Welcome to Temple of praise (TOP) ministries. A Thriving Community
             of Faith in Eindhoven. We’re so glad you’re here! At TOP ministries,
             we are a vibrant, Christ-centered community rooted in love, faith,
             and unity. Located in the heart of Eindhoven, our family is made up
-            of people from all walks of life, cultures, and backgrounds — just
+            of people from all walks of life, cultures, and backgrounds just
             like you. Whether you’re new to the city, searching for a place to
             worship, or simply curious about faith, we want you to know there’s
             a place for you here. We believe in doing life together, growing

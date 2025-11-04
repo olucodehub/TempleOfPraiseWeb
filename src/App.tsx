@@ -11,6 +11,7 @@ import ChurchWork from './pages/ChurchWork';
 import MediaGallery from './pages/MediaGallery.tsx';
 import Events from './pages/Events';
 import NewMember from './pages/NewMember';
+import Foundation from './pages/Foundation';
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ function App() {
               <Route path="/media" element={<MediaGallery />} />
               <Route path="/events" element={<Events />} />
               <Route path="/new-member" element={<NewMember />} />
+              <Route path="/foundation" element={<Foundation />} />
             </Routes>
           </main>
           <Footer />
