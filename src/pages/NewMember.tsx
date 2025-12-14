@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation } from 'react-query';
-import { UserPlus, Mail, Phone, MapPin, User } from 'lucide-react';
-import { createMember } from '../api';
+import { UserPlus, Mail, Phone, MapPin, User, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { registerMember } from '../services/azureStorage';
+import { MemberRegistration } from '../types';
 
 const NewMember = () => {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<MemberRegistration>({
     name: '',
     email: '',
     phone: '',
     address: '',
   });
+  const [successMessage, setSuccessMessage] = useState('');
 
-  const { mutate, isLoading, error } = useMutation(createMember, {
+  const { mutate, isLoading, error } = useMutation(registerMember, {
     onSuccess: () => {
-      alert('Registration successful! Welcome to Temple of Praise Ministries.');
-      navigate('/');
+      setSuccessMessage('Registration successful! Welcome to Temple of Praise Ministries. Your account is pending approval. Once approved, you will have access to exclusive member content and church resources.');
+      setFormData({ name: '', email: '', phone: '', address: '' });
     },
   });
 
@@ -66,9 +68,26 @@ const NewMember = () => {
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
+            {successMessage && (
+              <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium">{successMessage}</p>
+                  <button
+                    type="button"
+                    onClick={() => navigate('/login')}
+                    className="mt-2 text-green-600 hover:text-green-800 underline text-sm"
+                  >
+                    Go to Login Page
+                  </button>
+                </div>
+              </div>
+            )}
+
             {error && (
-              <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg">
-                An error occurred. Please try again.
+              <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg flex items-start gap-3">
+                <AlertCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                <p>{(error as Error).message || 'An error occurred. Please try again.'}</p>
               </div>
             )}
 
@@ -159,10 +178,17 @@ const NewMember = () => {
             <div className="flex items-center justify-end">
               <button
                 type="submit"
-                disabled={isLoading}
-                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isLoading || !!successMessage}
+                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
-                {isLoading ? 'Submitting...' : 'Register as New Member'}
+                {isLoading ? (
+                  <>
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    Submitting...
+                  </>
+                ) : (
+                  'Register as New Member'
+                )}
               </button>
             </div>
           </form>

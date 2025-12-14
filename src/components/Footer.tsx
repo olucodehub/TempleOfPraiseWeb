@@ -44,6 +44,11 @@ const Footer = () => {
                   Join Us
                 </Link>
               </li>
+              <li>
+                <Link to='/login' className='text-gray-400 hover:text-white'>
+                  Member Login
+                </Link>
+              </li>
             </ul>
           </div>
 
