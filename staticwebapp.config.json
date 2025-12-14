@@ -1,0 +1,51 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,gif,ico}", "/assets/*"]
+  },
+  "routes": [
+    {
+      "route": "/login",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/admin",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/media",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/new-member",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/about",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/pastor",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/departments",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/church-work",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/events",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/foundation",
+      "rewrite": "/index.html"
+    }
+  ],
+  "mimeTypes": {
+    ".json": "application/json"
+  }
+}
