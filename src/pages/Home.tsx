@@ -23,31 +23,37 @@ const carouselImages = [
     url: 'https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
     title: 'Prayer & Intercession',
     description: 'Standing together in faith and prayer',
+    position: 'center',
   },
   {
     url: '/images/choir1.png',
     title: 'Worship Experience',
     description: 'Join us in praising the Lord with joy and thanksgiving',
+    position: 'center',
   },
   {
     url: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
     title: 'Spirit-Filled Worship',
     description: 'Experience the power of pentecostal praise',
+    position: 'center',
   },
   {
     url: '/images/home/friend.jpg',
     title: 'Diverse Community',
     description: 'A multicultural family united in Christ',
+    position: 'top',
   },
   {
-    url: '/images/home/youth.jpg', // or a suitable worship photo
+    url: '/images/home/youth.jpg',
     title: 'Youth Ministry',
     description: 'Empowering the next generation',
+    position: 'center',
   },
   {
     url: '/images/home/choirpic.jpg',
     title: 'TOP Voices',
     description: 'Our choir lifting hearts through harmonious worship',
+    position: 'center',
   },
 ];
 
@@ -103,8 +109,11 @@ const Home = () => {
             }`}
           >
             <div
-              className='absolute inset-0 bg-cover bg-center'
-              style={{ backgroundImage: `url(${image.url})` }}
+              className='absolute inset-0 bg-cover'
+              style={{
+                backgroundImage: `url(${image.url})`,
+                backgroundPosition: image.position || 'center'
+              }}
             >
               <div className='absolute inset-0 bg-black bg-opacity-50' />
             </div>
