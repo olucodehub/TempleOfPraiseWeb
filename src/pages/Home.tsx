@@ -35,7 +35,7 @@ const carouselImages = [
     description: 'Experience the power of pentecostal praise',
   },
   {
-    url: 'https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
+    url: '/images/home/friend.jpg',
     title: 'Diverse Community',
     description: 'A multicultural family united in Christ',
   },
