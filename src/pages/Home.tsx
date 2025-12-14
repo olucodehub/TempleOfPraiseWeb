@@ -41,7 +41,8 @@ const carouselImages = [
     url: '/images/home/friend.jpg',
     title: 'Diverse Community',
     description: 'A multicultural family united in Christ',
-    position: 'top',
+    position: 'center 30%',
+    size: 'contain',
   },
   {
     url: '/images/home/youth.jpg',
@@ -109,10 +110,13 @@ const Home = () => {
             }`}
           >
             <div
-              className='absolute inset-0 bg-cover'
+              className='absolute inset-0'
               style={{
                 backgroundImage: `url(${image.url})`,
-                backgroundPosition: image.position || 'center'
+                backgroundPosition: image.position || 'center',
+                backgroundSize: image.size || 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: '#1a1a2e'
               }}
             >
               <div className='absolute inset-0 bg-black bg-opacity-50' />
