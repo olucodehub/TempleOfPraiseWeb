@@ -8,9 +8,9 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Our Pastor', path: '/pastor' },
-    { name: 'Departments', path: '/departments' },
-    { name: 'Church Work', path: '/church-work' },
+    { name: 'Leadership', path: '/leadership' },
+    { name: 'Our Programs', path: '/programs' },
+    { name: 'Community Work', path: '/community-work' },
     { name: 'Media', path: '/media' },
     { name: 'Events', path: '/events' },
     { name: 'The Foundation', path: '/foundation' },

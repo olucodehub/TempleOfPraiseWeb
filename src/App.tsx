@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { AuthProvider } from './context/AuthContext';
@@ -8,9 +7,9 @@ import ProtectedRoute from './components/ProtectedRoute';
 import AdminProtectedRoute from './components/AdminProtectedRoute';
 import Home from './pages/Home';
 import About from './pages/About';
-import Pastor from './pages/Pastor';
-import Departments from './pages/Departments';
-import ChurchWork from './pages/ChurchWork';
+import Leadership from './pages/Leadership';
+import Programs from './pages/Programs';
+import CommunityWork from './pages/CommunityWork';
 import MediaGallery from './pages/MediaGallery';
 import Events from './pages/Events';
 import NewMember from './pages/NewMember';
@@ -31,9 +30,9 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/pastor" element={<Pastor />} />
-                <Route path="/departments" element={<Departments />} />
-                <Route path="/church-work" element={<ChurchWork />} />
+                <Route path="/leadership" element={<Leadership />} />
+                <Route path="/programs" element={<Programs />} />
+                <Route path="/community-work" element={<CommunityWork />} />
                 <Route
                   path="/media"
                   element={

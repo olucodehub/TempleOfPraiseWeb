@@ -1,65 +1,62 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { format } from 'date-fns';
 import {
   Calendar,
-  Video,
   Users,
   ChevronLeft,
   ChevronRight,
   Clock,
   MapPin,
   Heart,
-  BookOpen,
   Music,
-  Mic,
+  HandHeart,
 } from 'lucide-react';
-import { getHomeContent, getMedia } from '../api';
+import { getMedia } from '../api';
 //import { getEvents } from '../api';                     <-----  Uncokmment this line when ready to load events from backend
 import { dummyEvents } from '../data/dummyEvents';
 
 const carouselImages = [
   {
-    url: 'https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
-    title: 'Prayer & Intercession',
-    description: 'Standing together in faith and prayer',
+    url: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
+    title: 'Community Support',
+    description: 'Standing together to help those in need',
     position: 'center',
   },
   {
     url: '/images/choir1.png',
-    title: 'Worship Experience',
-    description: 'Join us in praising the Lord with joy and thanksgiving',
+    title: 'Music Academy',
+    description: 'Nurturing musical talent in youth and children',
     position: 'center',
   },
   {
-    url: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
-    title: 'Spirit-Filled Worship',
-    description: 'Experience the power of pentecostal praise',
+    url: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
+    title: 'Immigrant Services',
+    description: 'Helping newcomers settle and thrive in the Netherlands',
     position: 'center',
   },
   {
     url: '/images/home/friend.jpg',
     title: 'Diverse Community',
-    description: 'A multicultural family united in Christ',
+    description: 'A multicultural family united in purpose',
     position: 'center 30%',
     size: 'contain',
   },
   {
     url: '/images/home/youth.jpg',
-    title: 'Youth Ministry',
+    title: 'Youth Programs',
     description: 'Empowering the next generation',
     position: 'center',
   },
   {
     url: '/images/home/choirpic.jpg',
     title: 'TOP Voices',
-    description: 'Our choir lifting hearts through harmonious worship',
+    description: 'Our music group bringing joy through harmonious performance',
     position: 'center',
   },
 ];
 
 const Home = () => {
-  const { data: homeContent } = useQuery('homeContent', getHomeContent);
   //const { data: events } = useQuery('events', getEvents);        <-----  Uncokmment this line when ready to load events from backend
   const { data: media } = useQuery('media', getMedia);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -176,87 +173,88 @@ const Home = () => {
 
         <div className='bg-white rounded-lg shadow-lg p-8'>
           <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-            Welcome Message
+            Welcome to Temple of Praise Ministries
           </h2>
           <p className='text-gray-600 text-lg mb-6'>
-            {homeContent?.welcomeMessage}
+            A Community Organization Dedicated to Making a Difference
           </p>
           <blockquote className='border-l-4 border-purple-500 pl-4 italic'>
-            Welcome to Temple of praise (TOP) ministries. A Thriving Community
-            of Faith in Eindhoven. We’re so glad you’re here! At TOP ministries,
-            we are a vibrant, Christ-centered community rooted in love, faith,
-            and unity. Located in the heart of Eindhoven, our family is made up
-            of people from all walks of life, cultures, and backgrounds just
-            like you. Whether you’re new to the city, searching for a place to
-            worship, or simply curious about faith, we want you to know there’s
-            a place for you here. We believe in doing life together, growing
-            spiritually, and serving with purpose. Join us as we worship, grow,
-            and impact our world together. You are welcome here. You are loved
-            here. You belong here.
+            Welcome to Temple of Praise (TOP) Ministries — a thriving community
+            organization in Eindhoven. We're so glad you're here! At TOP Ministries,
+            we are a vibrant, multicultural community rooted in compassion, unity,
+            and service. Located in the heart of Eindhoven, our family is made up
+            of people from all walks of life, cultures, and backgrounds — just
+            like you. Whether you're new to the Netherlands, looking for community
+            support, interested in music education, or seeking to volunteer and
+            make a difference, there's a place for you here. We believe in doing
+            life together, growing as individuals, and serving with purpose.
+            Join us as we support, connect, and impact our community together.
+            You are welcome here. You are valued here. You belong here.
           </blockquote>
         </div>
       </section>
 
-      {/* Service Times */}
+      {/* Our Programs */}
       <section className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='bg-purple-50 rounded-lg shadow-lg p-8'>
           <h2 className='text-3xl font-bold text-gray-900 mb-8 text-center'>
-            Join Us in Worship
+            Our Programs
           </h2>
           <div className='grid md:grid-cols-3 gap-8'>
             <div className='bg-white rounded-lg p-6 text-center shadow-md'>
-              <Clock className='h-12 w-12 text-purple-600 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>Sunday Service</h3>
-              <p className='text-gray-600'>10:00 AM</p>
-              <p className='text-sm text-gray-500 mt-2'>Main Worship Service</p>
+              <Music className='h-12 w-12 text-purple-600 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold mb-2'>Music Academy</h3>
+              <p className='text-gray-600'>Saturdays 10:00 AM</p>
+              <p className='text-sm text-gray-500 mt-2'>Music lessons for youth & children</p>
             </div>
             <div className='bg-white rounded-lg p-6 text-center shadow-md'>
-              <BookOpen className='h-12 w-12 text-purple-600 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>Bible Study</h3>
-              <p className='text-gray-600'>Wednesday 7:00 PM</p>
+              <HandHeart className='h-12 w-12 text-purple-600 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold mb-2'>Community Support</h3>
+              <p className='text-gray-600'>Weekdays 9:00 AM - 5:00 PM</p>
               <p className='text-sm text-gray-500 mt-2'>
-                In-depth Scripture Study
+                Counseling & integration services
               </p>
             </div>
             <div className='bg-white rounded-lg p-6 text-center shadow-md'>
               <Heart className='h-12 w-12 text-purple-600 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>Prayer Meeting</h3>
-              <p className='text-gray-600'>Friday 7:00 PM</p>
-              <p className='text-sm text-gray-500 mt-2'>Intercessory Prayer</p>
+              <h3 className='text-xl font-semibold mb-2'>Charity Outreach</h3>
+              <p className='text-gray-600'>Ongoing Programs</p>
+              <p className='text-sm text-gray-500 mt-2'>Supporting those in need</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Sermon */}
+      {/* Meet Our Director */}
       <section className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='bg-white rounded-lg shadow-lg overflow-hidden'>
           <div className='md:flex'>
             <div className='md:flex-1'>
               <img
                 src='/images/pastor.jpg'
-                alt='Latest Sermon'
+                alt='Our Director'
                 className='w-full h-64 md:h-full object-cover'
               />
             </div>
 
             <div className='md:flex-1 p-8'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-                Latest Sermon
+                Meet Our Director
               </h2>
               <div className='flex items-center mb-4'>
-                <Mic className='h-5 w-5 text-purple-600 mr-2' />
-                <span className='text-gray-600'>The Power of Faith</span>
+                <Users className='h-5 w-5 text-purple-600 mr-2' />
+                <span className='text-gray-600'>Community Leadership</span>
               </div>
               <p className='text-gray-600 mb-6'>
-                Discover how faith can move mountains and transform lives in
-                this powerful message from our latest Sunday service.
+                Our director brings years of experience in community development,
+                immigrant integration, and social services. Dedicated to making
+                a positive impact in Eindhoven and beyond.
               </p>
               <button
                 className='bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors'
-                onClick={() => window.open('https://rhemacloud.com', '_blank')}
+                onClick={() => window.location.href = '/leadership'}
               >
-                Listen Now
+                Learn More
               </button>
             </div>
           </div>
@@ -270,23 +268,23 @@ const Home = () => {
           <div className='grid md:grid-cols-4 gap-8'>
             <div className='text-center'>
               <Users className='h-12 w-12 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>Join a Group</h3>
-              <p>Connect with believers in your area</p>
+              <h3 className='text-xl font-semibold mb-2'>Join Our Community</h3>
+              <p>Connect with people in your area</p>
             </div>
             <div className='text-center'>
               <Music className='h-12 w-12 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>Worship Team</h3>
-              <p>Use your musical gifts</p>
+              <h3 className='text-xl font-semibold mb-2'>Music Programs</h3>
+              <p>Learn and share your musical gifts</p>
             </div>
             <div className='text-center'>
               <Heart className='h-12 w-12 mx-auto mb-4' />
               <h3 className='text-xl font-semibold mb-2'>Volunteer</h3>
-              <p>Serve in our ministries</p>
+              <p>Help make a difference</p>
             </div>
             <div className='text-center'>
               <MapPin className='h-12 w-12 mx-auto mb-4' />
               <h3 className='text-xl font-semibold mb-2'>Find Us</h3>
-              <p>Get directions to our church</p>
+              <p>Get directions to our center</p>
             </div>
           </div>
         </div>

@@ -25,15 +25,15 @@
       "rewrite": "/index.html"
     },
     {
-      "route": "/pastor",
+      "route": "/leadership",
       "rewrite": "/index.html"
     },
     {
-      "route": "/departments",
+      "route": "/programs",
       "rewrite": "/index.html"
     },
     {
-      "route": "/church-work",
+      "route": "/community-work",
       "rewrite": "/index.html"
     },
     {

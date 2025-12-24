@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation } from 'react-query';
 import { UserPlus, Mail, Phone, MapPin, User, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
@@ -17,7 +17,7 @@ const NewMember = () => {
 
   const { mutate, isLoading, error } = useMutation(registerMember, {
     onSuccess: () => {
-      setSuccessMessage('Registration successful! Welcome to Temple of Praise Ministries. Your account is pending approval. Once approved, you will have access to exclusive member content and church resources.');
+      setSuccessMessage('Registration successful! Welcome to Temple of Praise Ministries. Your account is pending approval. Once approved, you will have access to exclusive member content and community resources.');
       setFormData({ name: '', email: '', phone: '', address: '' });
     },
   });
@@ -44,9 +44,9 @@ const NewMember = () => {
         <div className="absolute inset-0 bg-black bg-opacity-60" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Join Our Family</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Join Our Community</h1>
             <p className="text-xl md:text-2xl max-w-2xl">
-              Become a part of our vibrant, multicultural community of believers
+              Become a part of our vibrant, multicultural community
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ const NewMember = () => {
           <UserPlus className="h-12 w-12 text-purple-600 mx-auto mb-4" />
           <h2 className="text-3xl font-bold text-gray-900 mb-4">New Member Registration</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            We're delighted that you're interested in joining Temple of Praise Ministries. 
+            We're delighted that you're interested in joining Temple of Praise Ministries.
             Please fill out the form below, and we'll reach out to welcome you personally.
           </p>
         </div>
@@ -206,7 +206,7 @@ const NewMember = () => {
               </div>
               <h4 className="text-lg font-semibold mb-2">Welcome Email</h4>
               <p className="text-gray-600">
-                You'll receive a welcome email with important information about our church
+                You'll receive a welcome email with important information about our organization
               </p>
             </div>
             <div className="text-center">
@@ -215,16 +215,16 @@ const NewMember = () => {
               </div>
               <h4 className="text-lg font-semibold mb-2">Personal Call</h4>
               <p className="text-gray-600">
-                One of our welcome team members will call to greet you personally
+                One of our team members will call to greet you personally
               </p>
             </div>
             <div className="text-center">
               <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <UserPlus className="h-8 w-8 text-purple-600" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">New Members Class</h4>
+              <h4 className="text-lg font-semibold mb-2">Orientation Session</h4>
               <p className="text-gray-600">
-                Join our next new members class to learn more about our church
+                Join our orientation to learn more about our programs and services
               </p>
             </div>
           </div>

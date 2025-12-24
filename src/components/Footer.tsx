@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Church, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,12 +8,12 @@ const Footer = () => {
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
           <div>
             <div className='flex items-center mb-4'>
-              <Church className='h-8 w-8 text-purple-400' />
-              <span className='ml-2 text-xl font-bold'>Temple of Praise</span>
+              <Heart className='h-8 w-8 text-purple-400' />
+              <span className='ml-2 text-xl font-bold'>Temple of Praise Ministries</span>
             </div>
             <p className='text-gray-400'>
-              A place of worship, fellowship, and spiritual growth in Eindhoven,
-              Netherlands.
+              A community organization dedicated to support, education, and
+              positive impact in Eindhoven, Netherlands.
             </p>
           </div>
 
@@ -66,7 +65,7 @@ const Footer = () => {
               <li className='flex items-center'>
                 <Phone className='h-5 w-5 mr-2 text-purple-400' />
                 <a
-                  href='tel:+31XXXXXXXXX'
+                  href='tel:+31612585216'
                   className='text-gray-400 hover:text-white'
                 >
                   +31 61 258 5216
@@ -75,7 +74,7 @@ const Footer = () => {
               <li className='flex items-center'>
                 <Mail className='h-5 w-5 mr-2 text-purple-400' />
                 <a
-                  href='mailto:info@templeofpraise.nl'
+                  href='mailto:info@templeofpraiseministries.nl'
                   className='text-gray-400 hover:text-white'
                 >
                   info@templeofpraiseministries.nl
@@ -85,14 +84,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className='text-lg font-semibold mb-4'>Service Times</h3>
+            <h3 className='text-lg font-semibold mb-4'>Opening Hours</h3>
             <ul className='space-y-2 text-gray-400'>
-              <li>Sunday Service: 11:00 AM - 1:00 PM</li>
-              <li>Sunday Youth Service: 10:15 AM - 11:00 AM</li>
-              <li>
-                All Night Prayers: 12:00 AM - 03:00 AM (Every Last Friday of the
-                month)
-              </li>
+              <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
+              <li>Saturday: Music Academy 10:00 AM</li>
+              <li>Community Events: See Events page</li>
             </ul>
           </div>
         </div>
