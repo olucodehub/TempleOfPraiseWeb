@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: 'Our Programs', path: '/programs' },
     { name: 'Community Work', path: '/community-work' },
     { name: 'Media', path: '/media' },
-    { name: 'Events', path: '/events' },
+    // { name: 'Events', path: '/events' },  // Temporarily disabled
     { name: 'The Foundation', path: '/foundation' },
     { name: 'Join Us', path: '/new-member' },
   ];

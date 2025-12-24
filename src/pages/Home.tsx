@@ -24,7 +24,7 @@ const carouselImages = [
     position: 'center',
   },
   {
-    url: '/images/choir1.png',
+    url: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
     title: 'Music Academy',
     description: 'Nurturing musical talent in youth and children',
     position: 'center',
